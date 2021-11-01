@@ -1,0 +1,146 @@
+---
+downloads: ~/.ansible-downloads/
+
+configure_dotfiles: true
+configure_terminal: true
+configure_osx: false
+
+terminal_profile_name: Stavn
+
+# Set to 'true' to configure the Dock via dockutil.
+configure_dock: true
+dockitems_remove:
+  - Launchpad
+  - TV
+  - Podcasts
+  - "App Store"
+  - Mail
+  - Maps
+  - Photos
+  - Reminders
+  - Notes
+  - Music
+  - Safari
+  - Messages
+  - FaceTime
+  - Contacts
+dockitems_persist:
+  - name: "System Preferences"
+    path: "/Applications/System Preferences.app/"
+    pos: 1
+  - name: "Spotify"
+    path: "/Applications/Spotify.app/"
+    pos: 4
+  - name: "Slack"
+    path: "/Applications/Slack.app/"
+    pos: 5
+  - name: "Microsoft Outlook"
+    path: "/Applications/Microsoft Outlook.app/"
+    pos: 6
+  - name: "Microsoft Teams"
+    path: "/Applications/Microsoft Teams.app/"
+    pos: 7
+  - name: "Visual Studio Code"
+    path: "/Applications/Visual Studio Code.app/"
+    pos: 8
+  - name: "Firefox"
+    path: "/Applications/Firefox.app/"
+    pos: 9
+
+configure_sudoers: false
+sudoers_custom_config: ""
+# Example:
+# sudoers_custom_config: |
+#   # Allow users in admin group to use sudo with no password.
+#   %admin ALL=(ALL) NOPASSWD: ALL
+
+dotfiles_repo: https://github.com/tcinbis/dotfiles
+dotfiles_repo_accept_hostkey: true
+dotfiles_repo_local_destination: ~/Development/git-repos/dotfiles
+dotfiles_files:
+  - .zshrc
+  - .gitignore
+  - .inputrc
+  - .osx
+  - .vimrc
+
+homebrew_installed_packages:
+  # - ansible # Installed via Pip.
+  - autoconf
+  - git
+  - github/gh/gh
+  - go
+  - gpg
+  - iperf
+  - nmap
+  - ssh-copy-id
+  - cowsay
+  - readline
+  - openssl
+  - pv
+  - wget
+  - zsh-history-substring-search
+  - thefuck
+
+homebrew_taps:
+  - homebrew/core
+  - homebrew/cask
+  - homebrew/cask-drivers
+  - homebrew/cask-fonts
+
+homebrew_cask_appdir: /Applications
+homebrew_cask_apps:
+  - docker
+  - firefox
+  - slack
+  - vagrant
+  # - visual-studio-code
+  - 1password
+  - Rectangle
+  - zsa-wally
+  - microsoft-teams
+  - font-fontawesome
+  - font-jetbrains-mono
+  - font-fira-code
+  - font-hack-nerd-font
+  - spotify
+
+# See `geerlingguy.mas` role documentation for usage instructions.
+mas_installed_apps: []
+mas_email: ""
+mas_password: ""
+
+osx_script: "~/.osx --no-restart"
+
+# Install packages from other package managers.
+# Note: You are responsible for making sure the required package managers are
+# installed, eg. through homebrew.
+composer_packages: []
+# - name: drush
+#   state: present # present/absent, default: present
+#   version: "^8.1" # default: N/A
+gem_packages: []
+# - name: bundler
+#   state: present # present/absent/latest, default: present
+#   version: "~> 1.15.1" # default: N/A
+npm_packages: []
+# - name: webpack
+#   state: present # present/absent/latest, default: present
+#   version: "^2.6" # default: N/A
+pip_packages: []
+# - name: mkdocs
+#   state: present # present/absent/latest, default: present
+#   version: "0.16.3" # default: N/A
+
+zsh_plugins_default_dest: "/Users/tom/.oh-my-zsh/custom"
+zsh_plugins:
+  - name: poetry
+    repo: https://github.com/darvid/zsh-poetry
+    dest: "{{ zsh_plugins_default_dest }}/plugin/poetry"
+  - name: spaceship
+    repo: https://github.com/spaceship-prompt/spaceship-prompt.git
+    dest: "{{ zsh_plugins_default_dest }}/themes/spaceship-prompt"
+
+# Glob pattern to ansible task files to run after all other tasks are finished.
+post_provision_tasks:
+  - "post-tasks/*"
