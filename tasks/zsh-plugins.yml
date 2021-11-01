@@ -1,0 +1,8 @@
+---
+- name: Clone zsh plugin repos
+  git:
+    repo: "{{ item.repo }}"
+    dest: "{{ item.dest | mandatory }}"
+    accept_hostkey: true
+    depth: 1
+  loop: "{{ zsh_plugins }}"

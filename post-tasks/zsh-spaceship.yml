@@ -1,0 +1,7 @@
+---
+- name: Link spaceship theme
+  file:
+    src: "{{ zsh_plugins_default_dest }}/themes/spaceship-prompt/spaceship.zsh-theme"
+    path: "{{ zsh_plugins_default_dest }}/themes/spaceship.zsh-theme"
+    mode: 0644
+    state: link
