@@ -81,6 +81,7 @@ homebrew_installed_packages:
   - wget
   - zsh-history-substring-search
   - thefuck
+  - azure-cli
 
 homebrew_taps:
   - homebrew/core
