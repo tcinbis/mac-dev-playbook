@@ -69,7 +69,7 @@ homebrew_installed_packages:
   - autoconf
   - git
   - github/gh/gh
-  - go
+  - go@1.17
   - gpg
   - iperf
   - nmap
@@ -82,12 +82,16 @@ homebrew_installed_packages:
   - zsh-history-substring-search
   - thefuck
   - azure-cli
+  - azure-functions-core-tools@3
+  - mono-libgdiplus
 
 homebrew_taps:
   - homebrew/core
   - homebrew/cask
   - homebrew/cask-drivers
   - homebrew/cask-fonts
+  - azure/functions
+  - isen-ng/dotnet-sdk-versions
 
 homebrew_cask_appdir: /Applications
 homebrew_cask_apps:
@@ -105,6 +109,8 @@ homebrew_cask_apps:
   - font-fira-code
   - font-hack-nerd-font
   - spotify
+  - dotnet-sdk
+  - dotnet-sdk3-1-400
 
 # See `geerlingguy.mas` role documentation for usage instructions.
 mas_installed_apps: []
