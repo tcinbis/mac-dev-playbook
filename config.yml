@@ -84,6 +84,15 @@ homebrew_installed_packages:
   - azure-cli
   - azure-functions-core-tools@3
   - mono-libgdiplus
+  - stern
+  - kubernetes-cli # kubectl
+  - minikube
+  - kubectx
+  - hey # HTTP Load tester
+  - yq # query YAML
+  - jq # query JSON
+  - httpie # HTTP terminal client
+  - watch
 
 homebrew_taps:
   - homebrew/core
