@@ -40,12 +40,15 @@ dockitems_persist:
   - name: "Microsoft Teams"
     path: "/Applications/Microsoft Teams.app/"
     pos: 7
+  - name: "Microsoft OneNote"
+    path: "/Applications/Microsoft OneNote.app/"
+    pos: 8
   - name: "Visual Studio Code"
     path: "/Applications/Visual Studio Code.app/"
-    pos: 8
+    pos: 9
   - name: "Firefox"
     path: "/Applications/Firefox.app/"
-    pos: 9
+    pos: 10
 
 configure_sudoers: false
 sudoers_custom_config: ""
@@ -63,6 +66,7 @@ dotfiles_files:
   - .inputrc
   - .osx
   - .vimrc
+  - .kubctl.completion.zsh
 
 homebrew_installed_packages:
   # - ansible # Installed via Pip.
@@ -93,6 +97,7 @@ homebrew_installed_packages:
   - jq # query JSON
   - httpie # HTTP terminal client
   - watch
+  - derailed/popeye/popeye
 
 homebrew_taps:
   - homebrew/core
